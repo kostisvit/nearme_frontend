@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.anonymous.nearme-frontend"
+      "bundleIdentifier": "com.anonymous.nearme-frontend",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Χρειαζόμαστε την τοποθεσία σας για να σας δείχνουμε μέρη και υπηρεσίες κοντά σας."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -32,6 +35,12 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Χρειαζόμαστε την τοποθεσία σας για να σας δείχνουμε μέρη και υπηρεσίες κοντά σας."
         }
       ]
     ],
