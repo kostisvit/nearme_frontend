@@ -22,11 +22,11 @@ const COLORS = {
 
 const WelcomeScreen = () => {
   const handleGuestPress = () => {
-    router.replace('/home');
+    router.push('/home');
   };
 
   const handleLoginPress = () => {
-    console.log('Login');
+    router.push('/authentication/login');
   };
 
   const handleSignupPress = () => {

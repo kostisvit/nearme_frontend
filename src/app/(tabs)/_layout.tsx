@@ -5,7 +5,7 @@ export default function TabsLayout() {
   return (
     <Tabs screenOptions={{
       tabBarActiveTintColor: "coral",
-      tabBarShowLabel: false,
+      tabBarShowLabel: true,
       }}>
 
       <Tabs.Screen
@@ -14,6 +14,17 @@ export default function TabsLayout() {
           title: "Home",
           tabBarIcon: () => (
             <Ionicons name="home" size={28} color="grey"  />
+          )
+
+        }}
+      />
+
+      <Tabs.Screen
+        name="search"
+        options={{
+          title: "Searh",
+          tabBarIcon: () => (
+            <Ionicons name="search" size={28} color="grey" />
           )
 
         }}
@@ -29,6 +40,7 @@ export default function TabsLayout() {
 
         }}
       />
+
     </Tabs>
   );
 }

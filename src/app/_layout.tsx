@@ -2,7 +2,11 @@ import { Stack } from 'expo-router';
 
 export default function RootLayout() {
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        animation: "slide_from_right",
+        gestureEnabled: true,
+      }}>
       {/* Welcome screen */}
       <Stack.Screen
         name="index"
@@ -18,6 +22,14 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+
+      <Stack.Screen
+        name="authentication/login"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
+
   );
 }
