@@ -21,7 +21,6 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-
   const handleLogin = async () => {
     if (!email || !password) {
       Alert.alert(
@@ -35,16 +34,10 @@ export default function LoginScreen() {
       setLoading(true);
 
       const data = await login(email, password);
-      const locationGranted = await requestLocationPermission();
+
+      await requestLocationPermission();
 
       console.log("Logged in:", data);
-
-      if (!locationGranted) {
-        Alert.alert(
-          "Location permission",
-          "This app needs your location to show places and services near you."
-        );
-      }
 
       router.replace("/home");
     } catch (error) {

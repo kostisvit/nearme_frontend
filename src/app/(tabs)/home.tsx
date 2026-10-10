@@ -1,24 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function Home() {
+import { StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import CurrentLocation from "../components/CurrentLocation";
+
+
+export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome to the Home Page</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+
+      <CurrentLocation />
+
+
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#0F172A',
+    backgroundColor: "#f8f8ff",
   },
-
   title: {
-    color: '#FFFFFF',
-    fontSize: 28,
-    fontWeight: '700',
+    fontSize: 24,
+    fontWeight: "700",
+    margin: 16,
   },
 });

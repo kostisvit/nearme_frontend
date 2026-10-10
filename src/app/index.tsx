@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import { requestLocationPermission } from "./location/location";
 
 const COLORS = {
   background: '#0F172A',
@@ -21,8 +21,14 @@ const COLORS = {
 };
 
 const WelcomeScreen = () => {
-  const handleGuestPress = () => {
-    router.push('/home');
+  const handleGuestPress = async () => {
+    try {
+      await requestLocationPermission();
+    } catch (error) {
+      console.error("Location permission error:", error);
+    } finally {
+      router.push("/home");
+    }
   };
 
   const handleLoginPress = () => {
