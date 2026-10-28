@@ -3,11 +3,11 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Location from "expo-location";
 import { useCallback, useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 type CurrentLocationData = {
   latitude: number;
@@ -69,7 +69,7 @@ export default function CurrentLocation() {
       setLocation({ latitude, longitude, address });
     } catch {
       setError(
-        "Unable to get your location. Please try again."
+        "Η τοποθεσία δεν εντοπίστηκε.Προσπαθήστε πάλι."
       );
     } finally {
       setLoading(false);
