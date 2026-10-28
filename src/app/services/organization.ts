@@ -31,7 +31,7 @@ export type Organization = {
 
 export async function searchOrganizations(query: string) {
   const response = await fetch(
-    `${API_URL}/organizations/?search=${encodeURIComponent(query)}`
+    `${API_URL}/api/organizations/?search=${encodeURIComponent(query)}`
   );
 
   if (!response.ok) {

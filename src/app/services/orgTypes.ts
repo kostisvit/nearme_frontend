@@ -12,7 +12,7 @@ export type OrgType = {
 
 export async function getOrgTypes(query: string) {
   const response = await fetch(
-    `${API_URL}/api/org-types/`
+    `${API_URL}/api/organization/type/`
   );
 
   if (!response.ok) {

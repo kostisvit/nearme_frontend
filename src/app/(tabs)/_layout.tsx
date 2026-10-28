@@ -13,7 +13,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          title: "Αρχική",
           tabBarIcon: ({color}) => (
             <Ionicons name="home" size={24} color={color}  />
           )
@@ -24,7 +24,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="search"
         options={{
-          title: "Searh",
+          title: "Αναζήτηση",
           tabBarIcon: ({color}) => (
             <Ionicons name="search" size={24} color={color} />
           )
@@ -35,7 +35,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="favorites"
         options={{
-          title: "Favorites",
+          title: "Αγαπημένα",
           tabBarIcon: ({color}) => (
             <Ionicons name="heart-outline" size={24} color={color} />
           )
@@ -46,7 +46,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="settings"
         options={{
-          title: "Settings",
+          title: "Ρυθμίσεις",
           tabBarIcon: () => (
             <Ionicons name="settings" size={24} color="grey" />
           )
