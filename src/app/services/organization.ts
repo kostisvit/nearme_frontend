@@ -40,3 +40,18 @@ export async function searchOrganizations(query: string) {
 
   return response.json();
 }
+
+
+export async function getOrganization(
+  id: string | number
+) {
+  const response = await fetch(
+    `${API_URL}/api/organizations/${id}/`
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch organization details");
+  }
+
+  return response.json();
+}
